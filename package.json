@@ -1,0 +1,28 @@
+{
+  "name": "sf-task-15",
+  "version": "1.0.0",
+  "description": "Skillfactory Task of module 15 PHP",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "scip-scratch",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-csslint": "^1.0.1",
+    "gulp-pug-linter": "^1.5.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-stylelint": "^13.0.0",
+    "gulp-w3c-html-validator": "^5.0.1",
+    "node-sass": "^6.0.1",
+    "sass": "^1.42.1",
+    "stylelint": "^13.13.1"
+  },
+  "dependencies": {
+    "gulp-pug": "^5.0.0",
+    "gulp-shorthand": "^1.1.0"
+  }
+}

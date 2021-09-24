@@ -1,0 +1,142 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Практическое задание Модуля 15
+        //- подключение css
+        link(rel="stylesheet", href="css/style.css")
+        //- подключение шрифтов
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap")
+        link(rel="preconnect", href="https://fonts.googleapis.com")
+        link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    body
+        //- -------------------------- BODY ---------------------------------------------------------------------------------------------------------     
+        - var indexHTML = "index.html"
+        //- -------------------------- HEADER -------------------------------------------------------------------
+        header.header
+            .l-grid            
+                section.menu
+                    .menu__logo 
+                        a.menu__link(href=indexHTML): img.menu__img(src="img/WD.svg", alt="WD")                            
+                    nav.menu__nav.nav 
+                        ul.nav__list 
+                            li.nav__item: a.nav__link(href=indexHTML) главная                                
+                            li.nav__item: a.nav__link(href="#") об авторе                                
+                            li.nav__item: a.nav__link(href="#") работы
+                            li.nav__item: a.nav__link(href="#") процесс
+                            li.nav__item: a.nav__link(href="#") контакты                                                                                                   
+        //- -------------------------- MAIN ---------------------------------------------------------------------        
+        main.main 
+            //- -------------------------- WELCOME ------------------- 
+            section.welcome
+                .l-grid                              
+                    .welcome__content
+                        .welcome__image
+                            img.welcome__img(src="img/laptop.svg", alt="laptop")                            
+                        .welcome__text 
+                            h1.welcome__h.h1 Дизайн и верстка
+                            p.welcome__p.p
+                                | Lorem Ipsum - это текст-"рыба", часто используемый 
+                                | в печати и <br>вэб-дизайне. Lorem Ipsum является 
+                                | стандартной "рыбой" для текстов на латинице с начала XVI века.
+                            form.welcome__form(action="submit") 
+                                button.welcome__button.button(type="submit") написать мне 
+            //- -------------------------- ABOUT-ME -------------------
+            section.about-me 
+                .l-grid 
+                    .about-me__content
+                        h2.about-me__h.h Oбо мне
+                        p.about-me__p.p 
+                            | Lorem Ipsum - это текст-"рыба", часто используемый 
+                            | в печати и <br> вэб-дизайне. Lorem Ipsum является 
+                            | стандартной "рыбой" для текстов на латинице с начала XVI века.
+            //- -------------------------- PROJECTS -------------------
+            section.projects 
+                .l-grid 
+                    .projects__content
+                        - for (var x = 0; x < 6; x++)
+                          .projects__item 
+                              img.projects__img(src="img/projects.svg", alt="projects")
+                              .projects__text 
+                                  h3.projects__h.h 40+
+                                  p.projects__p.p проектов
+            //- -------------------------- MY-SKILLS -------------------
+            section.my-skills 
+                .l-grid
+                    .my-skills__content 
+                        .my-skills__progress 
+                            h2.progress__h.h Мои навыки
+                            ul.progress__list 
+                                li.progress__item 
+                                    p.progress__p.p HTML 
+                                    progress.progress__progress(value="75" max="100")
+                                li.progress__item 
+                                    p.progress__p.p CSS 
+                                    progress.progress__progress(value="65" max="100")
+                                li.progress__item 
+                                    p.progress__p.p JavaScript 
+                                    progress.progress__progress(value="15" max="100")  
+                        .my-skills__photo 
+                            img.my-skills__img(src="img/my-photo.jpg", alt="my-photo")
+            //- -------------------------- WORKFLOW -------------------
+            section.workflow 
+                .l-grid
+                    .workflow__content 
+                        h2.workflow__h.h Как я работаю
+                        p.workflow__p.p
+                            | Lorem Ipsum - это текст-"рыба", часто используемый 
+                            | в печати и <br> вэб-дизайне. Lorem Ipsum является 
+                            | стандартной "рыбой" для текстов на латинице с начала XVI века.
+                        iframe.workflow__iframe(height="600px" src="http://www.youtube.com/watch?v=5yx6BWlEVcY", allowfullscreen poster) 
+            //- -------------------------- PORTFOLIO -------------------    
+            section.portfolio                 
+                    .portfolio__content
+                        - for (var x = 0; x < 2; x++) 
+                          a.portfolio__link(href="#"): img.portfolio__img(src="img/picture1.png" alt="work picture")      
+                          a.portfolio__link(href="#"): img.portfolio__img(src="img/picture2.png" alt="work picture")
+                        - for (var x = 0; x < 2; x++)
+                          a.portfolio__link(href="#"): img.portfolio__img(src="img/picture2.png" alt="work picture")      
+                          a.portfolio__link(href="#"): img.portfolio__img(src="img/picture1.png" alt="work picture")                        
+            //- -------------------------- CLIENTS -------------------
+            section.clients 
+                .l-grid
+                    .clients__content
+                        - for (var x = 0; x < 4; x++)   
+                          img.clients__img(src="img/microsoft.png" alt="microsoft")
+            //- -------------------------- ORDER -------------------
+            section.order
+                .l-grid
+                    .order__content
+                        h2.order__h.h Хотите веб-сайт?
+                        p.oder__p.p
+                            | Lorem Ipsum - это текст-"рыба", часто используемый 
+                            | в печати и <br> вэб-дизайне. Lorem Ipsum является 
+                            | стандартной "рыбой" для текстов на латинице с начала XVI века.
+                        form.order__form(action="#") 
+                            .form__head 
+                                input.form__name.input(type="name" placeholder="Ваше имя")
+                                input.form__email.input(type="email" placeholder="Ваш e-mail")
+                            input.form__message.input(type="text" placeholder="Сообщение")
+                            button.form__button.button(type="submit") отправить
+        //- -------------------------- FOOTER ---------------------------------------------------------------------
+        footer.footer 
+            .l-grid 
+                .footer__content 
+                    .footer__text 
+                        p.footer__name.p Иванов Иван
+                        p.footer__license.p (с) 2018. Все права защищены.
+                    .footer__social 
+                        - for(var x = 0; x < 3; x++)
+                          a.footer__link(href="#"): img.footer__img(src="img/vk.svg", alt="Vk")
+                          
+
+            
+
+
+
+
+
+
+        
