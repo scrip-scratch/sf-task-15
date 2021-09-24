@@ -37,6 +37,6 @@
 - gulp-clean-css - сжимает css 
  
 
-> Визуально верстка никак не изменилась, доступ к новой версии по ссылке https://scrip-scratch.github.io/sf-task-12/
+> Визуально верстка никак не изменилась, доступ к новой версии по ссылке https://scrip-scratch.github.io/sf-task-15/
 
 > Ссылка на репозиторий изначального проекта https://github.com/scrip-scratch/sf_task_7
